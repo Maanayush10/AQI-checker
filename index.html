@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Air Quality Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Air Quality Checker</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+              </li>
+              <li class="nav-item">
+                
+              </li>
+              <li class="nav-item dropdown">
+              
+              </li>
+              <li class="nav-item">
+              
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input id="city" class="form-control me-2" type="search" placeholder="Search Place" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit" id="submit">Search </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+
+
+<!-- section -->
+      <div class="container py-3">
+        <header>
+          <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+            <h1 class="display-4 fw-normal">Place  : <span id="cityName"></span></h1>
+            <p class="fs-5 text-muted">Overall AQI : <span id="overall_aqi"></span></p>
+          </div>
+        </header>
+        <main>
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">CO</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="co_aqi"></span><small class="text-muted fw-light">
+                    </small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Concentration :<span id="CO_concentration"></span></li>
+                    <li>AQI : <span id="CO_aqi"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">NO<sub>2</sub></h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="no_aqi"></span><small class="text-muted fw-light">
+                      </small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Concentration :<span id="NO2_concentration"></span></li>
+                    <li>AQI : <span id="NO2_aqi"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">O<sub>3</sub></h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="o_aqi"></span><small class="text-muted fw-light">
+                    </small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Concentration :<span id="O3_concentration"></span></li>
+                    <li>AQI : <span id="O3_aqi"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+        </main>
+      </div>
+      <div class="container py-3">
+    
+        <main>
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">SO<sub>2</sub></h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="so_aqi"></span><small class="text-muted fw-light">
+                    </small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Concentration :<span id="SO2_concentration"></span></li>
+                    <li>AQI : <span id="SO2_aqi"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                  <h4 class="my-0 fw-normal">PM 10</h4>
+                </div>
+                <div class="card-body">
+                  <h1 class="card-title pricing-card-title"><span id="pm_aqi"></span><small class="text-muted fw-light">
+                    </small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                    <li>Concentration :<span id="PM10_concentration"></span></li>
+                    <li>AQI : <span id="PM10_aqi"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+
+      <!-- footer -->
+      <div class="container">
+        <footer class="py-3 my-4">
+          <p class="text-center text-muted">© 2023 Made by Maan.</p>
+        </footer>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
